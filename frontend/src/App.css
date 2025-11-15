@@ -1,0 +1,92 @@
+.app {
+  display: flex;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  transition: background 0.3s ease;
+}
+
+.dark .app {
+  background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%);
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-left: 88px;
+  background: #f5f7fa;
+  transition: background-color 0.3s ease;
+}
+
+.dark .main-content {
+  background: #111827;
+}
+
+.page-content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.dashboard-container {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.dashboard-top {
+  width: 100%;
+}
+
+.dashboard-middle {
+  display: flex;
+  gap: 20px;
+  height: 600px;
+}
+
+.dashboard-left {
+  flex: 2;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dark .dashboard-left {
+  background: #1f2937;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.dashboard-right {
+  flex: 1;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dark .dashboard-right {
+  background: #1f2937;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.dashboard-bottom {
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .dashboard-middle {
+    flex-direction: column;
+    height: auto;
+  }
+  
+  .dashboard-left,
+  .dashboard-right {
+    height: 400px;
+  }
+}
+
+

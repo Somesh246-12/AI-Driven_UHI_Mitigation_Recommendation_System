@@ -1,0 +1,237 @@
+.health-precautions {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dark .health-precautions {
+  background: #1f2937;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.health-header {
+  padding: 20px;
+  border-bottom: 1px solid #e5e7eb;
+  transition: border-color 0.3s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dark .health-header {
+  border-bottom-color: #374151;
+}
+
+.health-header h2 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.dark .health-header h2 {
+  color: #f9fafb;
+}
+
+.active-alerts {
+  font-size: 12px;
+  font-weight: 600;
+  color: #ef4444;
+  background: rgba(239, 68, 68, 0.1);
+  padding: 4px 12px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.dark .active-alerts {
+  color: #fca5a5;
+  background: rgba(239, 68, 68, 0.2);
+}
+
+.health-content {
+  padding: 20px;
+}
+
+.health-loading,
+.health-empty {
+  text-align: center;
+  padding: 40px 20px;
+  color: #6b7280;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.dark .health-loading,
+.dark .health-empty {
+  color: #ffffff;
+}
+
+.health-error {
+  padding: 20px;
+  border-radius: 8px;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.dark .health-error {
+  background: #7f1d1d;
+  border-color: #991b1b;
+}
+
+.health-error p {
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.health-error p:first-child {
+  color: #ef4444;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.dark .health-error p:first-child {
+  color: #fca5a5;
+}
+
+.health-error p:last-child {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.dark .health-error p:last-child {
+  color: #ffffff;
+}
+
+.health-error code {
+  background: rgba(0, 0, 0, 0.1);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+  font-size: 11px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark .health-error code {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+.health-items {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.health-item {
+  padding: 16px;
+  background: #ffffff;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+}
+
+.dark .health-item {
+  background: #374151;
+  border-color: #4b5563;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.health-item:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.health-item-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  width: 100%;
+}
+
+.health-item-icon-wrapper {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background-color 0.3s ease;
+}
+
+.health-item-icon {
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dark .health-item-icon-wrapper {
+  opacity: 0.8;
+}
+
+.health-item-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.health-item-title-section {
+  width: 100%;
+}
+
+.health-item-title-section h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 8px 0;
+  transition: color 0.3s ease;
+  line-height: 1.3;
+}
+
+.dark .health-item-title-section h3 {
+  color: #ffffff;
+}
+
+.health-item-message {
+  font-size: 13px;
+  color: #6b7280;
+  margin: 0;
+  line-height: 1.4;
+  transition: color 0.3s ease;
+}
+
+.dark .health-item-message {
+  color: #ffffff;
+}
+
+.severity-badge {
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 11px;
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase;
+  align-self: flex-start;
+  flex-shrink: 0;
+  letter-spacing: 0.5px;
+}
+
+
+@media (max-width: 768px) {
+  .health-items {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 1024px) {
+  .health-items {
+    grid-template-columns: 1fr;
+  }
+}
+
+

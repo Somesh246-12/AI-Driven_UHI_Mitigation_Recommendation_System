@@ -5,7 +5,7 @@ import { FaTree, FaHome, FaCampground, FaLayerGroup, FaTrash, FaRedo, FaPlay } f
 import { getHeatmapData, simulateIntervention } from '../services/api';
 import './MapContainer.css';
 
-const MAPBOX_TOKEN = process.env.REACT_APP_MAPBOX_TOKEN || 'pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw';
+const MAPBOX_TOKEN = process.env.REACT_APP_MAPBOX_TOKEN || 'pk.eyJ1Ijoic2hhbWJobzA3IiwiYSI6ImNtaHhvYWl6OTAzNmkyanNocHpkcHN1ejQifQ.qBC6Qbrj28BFEKvyL8oqHQ';
 
 const MapContainer = ({ onInterventionAdd, onSimulation, interventions, onInterventionRemove }) => {
   const [viewport, setViewport] = useState({
